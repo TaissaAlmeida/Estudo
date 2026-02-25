@@ -11,8 +11,11 @@ describe('RequisicacaoDeApi', ()=>{
          }
         
         }).then((response) => {
+          //Código para saber se o login deu certo
           expect(response.status).to.eq(200)
-        expect(response.body).to.have.property("message", "Login realizado com sucesso")
+
+          //Código para confirmar se a mensagem de sucesso do corpo da requisição está correta
+         expect(response.body).to.have.property("message", "Login realizado com sucesso")
               
         })    
       })
@@ -27,10 +30,10 @@ describe('RequisicacaoDeApi', ()=>{
             },
             failOnStatusCode: false
         }).then((response) => {
+             //Código para saber se o login deu errado
              expect(response.status).to.eq(401)
              expect(response.body).to.have.property("message","Email e/ou senha inválidos")
 })
-
 
   })
 }) 

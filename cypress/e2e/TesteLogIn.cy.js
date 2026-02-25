@@ -18,6 +18,7 @@ describe('teste', () => {
     // o ('have.text','Colocar EXATAMENTE o texto que vc está procurando')
     cy.get('#nameofuser').should('have.text','Welcome tassinham')
 
+    // o ('incluide.text','Colocar "parte" do texto que vc está procurando')
     cy.get('#nameofuser').should('include.text','tassinham')
     
  });
